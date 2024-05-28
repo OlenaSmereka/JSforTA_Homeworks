@@ -71,6 +71,10 @@
 // console.log('Seconds in a day ' + Day);
 // console.log('Seconds in a month ' + Month);
 
-
+// const MIN=60
+// let Hour=MIN*60, Day=Hour*24, Month=Day*31, Month1=Day*30, Month2=Day*28, Month3=Day*29;
+// console.log('Seconds in an hour ' + Hour);
+// console.log('Seconds in a day ' + Day);
+// console.log('Seconds in a month ' + Month + ' (in case of 31 days) OR ' + Month1 + ' (in case of 30 days) OR ' + Month2 + ' (in case of 28 days) OR ' + Month3 + '(in case of 28 days)');
 
 
