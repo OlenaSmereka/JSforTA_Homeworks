@@ -4,11 +4,15 @@
 
 // Third task
 
-// let name='Olena'; age=37;
+// let name='Olena', age=37;
 // document.write (name,',  ', age);
+//OR
+// alert(name+ ', ' + age);
 
 // name=age;
 // document.write (name,',  ', age);
+//OR
+// alert(name+ ', ' + age);
 
 
 // Fourth task
