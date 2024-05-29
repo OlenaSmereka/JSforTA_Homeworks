@@ -4,13 +4,12 @@
 
 // Third task
 
-// let name='Olena';
-// let age=37;
-// console.log(name);
-// console.log(age);
+// let name='Olena'; age=37;
+// document.write (name,',  ', age);
+
 // name=age;
-// console.log(name);
-// console.log(age);
+// document.write (name,',  ', age);
+
 
 // Fourth task
 
@@ -61,20 +60,15 @@
 // let login=prompt('Enter your login?');
 // let email=prompt('Enter your email?');
 // let password=prompt('Enter your password?');
-// console.log("'Dear "+ login + ", your email is " + email + "," + ` your password is ${password}.'`);
+// document.write ("'Dear "+ login + ", your email is " + email + "," + ` your password is ${password}.'`);
 
 // Eight task
 
 // const MIN=60
-// let Hour=MIN*60, Day=Hour*24, Month=Day*31;
-// console.log('Seconds in an hour ' + Hour);
-// console.log('Seconds in a day ' + Day);
-// console.log('Seconds in a month ' + Month);
-
-// const MIN=60
 // let Hour=MIN*60, Day=Hour*24, Month=Day*31, Month1=Day*30, Month2=Day*28, Month3=Day*29;
-// console.log('Seconds in an hour ' + Hour);
-// console.log('Seconds in a day ' + Day);
-// console.log('Seconds in a month ' + Month + ' (in case of 31 days) OR ' + Month1 + ' (in case of 30 days) OR ' + Month2 + ' (in case of 28 days) OR ' + Month3 + '(in case of 28 days)');
+// document.write ('Seconds in an hour ' + Hour);
+// document.write(', Seconds in a day ' + Day);
+// document.write(', Seconds in a month ' + Month + ' (in case of 31 days) OR ' + Month1 + ' (in case of 30 days) OR ' + Month2 + ' (in case of 28 days) OR ' + Month3 + '(in case of 28 days)');
+
 
 
