@@ -15,7 +15,6 @@
 // console.log(res3);  // true
 // console.log( typeof res3);  // " boolean "
  
-
 // let res4 = x-"y" // Add code is required use variables x and y
 // console.log(res4); // NaN
 // console.log( typeof res4);  // "number"
@@ -25,12 +24,12 @@
 // b ) a multiple of 7.
 // Display the result of the check in the console.
 
-
 // const number=+prompt("Enter any number");
 // if (number>0 && number%7===0) {
-// console.log(number);
-// } 
-// console.log(typeof number);
+// console.log("Your number is correct:" + number);
+// } else {
+//     console.log("Try again");
+// }
 
 // Task3 Create an empty array;
 // const list=[];
@@ -48,18 +47,16 @@
 // list[3]=null;
 // console.log(list);
 
-
 // 5) Enter the number of elements stored in the array on the screen;
 // document.write (list.length);
 
 // 6) Ask the user to enter any value and write this value in the fifth element of the array;
-// new_value=prompt("Enter any name, please");
+// new_value=prompt("Enter any value, please");
 // list[4]=new_value;
 // console.log(list);
 
 // 7) Display the fifth array element on the screen.
 // document.write(list[4]);
-
 
 // 8) Delete the 1st element of the array and display the array on the screen.
 // console.log(list);
@@ -69,7 +66,6 @@
 // OR 
 
 // document.write(list);
-
 
 //Task 4. Write a program that combines all existing elements of the array into a ribbon and separates them with the symbol “*”.
 // Initial array : let cities = [" Rome ", " Lviv ", " Warsaw "]
@@ -123,8 +119,6 @@
 
 // const d=new Date();
 // let hours=d.getHours();
-// if (hours>=23 && hours<5) {
-//     console.log("Good night");
 // if (hours>=5 && hours<11) {
 //     console.log("Good morning");
 // } else if (hours>=11 && hours<17) {
@@ -149,8 +143,8 @@
 //     case(hours>=17 && hours<23):
 //         console.log("Good day");
 //         break;
-//        default:
-//            console.log("Good night");
-//            break;
-//         }
+//     default:
+//         console.log("Good night");
+//         break;
+//     }
 
