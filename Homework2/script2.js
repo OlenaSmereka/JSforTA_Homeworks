@@ -99,7 +99,7 @@
 // let sqr_a=a**2;
 // let sqr_b=b**2;
 // let sqr_c=c**2;
-// if (a<0 || b<0 || c<0) {
+// if (a<0 || b<0 || c<0 || isNaN(a) || isNaN(b) || isNaN(c) || a==="" || b===""|| c==="") {
 //     console.log("Incorrect data");
 // }
 // else if (a>=0 && b>=0 && c>=0 && sqr_a==sqr_b+sqr_c) {
