@@ -3,27 +3,8 @@
 // generation of an exception if non-numeric parameters are passed to the function.
 // Write code that uses this function and handles possible exceptions*** 
 
-// ***without try...catch***
-
-function calcRectangleArea (width, heigth) {
-    return (width*height);
-} 
-    let width= prompt("please, enter the width");
-    let height= prompt("please, enter the height");
-    if (isNaN(width) || isNaN(height) || width==="" || height==="") {
-        throw new Error ("Please, enter numeric values for width and height"); 
-    } if (width<0 || height<0){
-        throw RangeError ("The params should be > 0");
-    } 
-    else {
-        let result=calcRectangleArea (width, height);
-        console.log(`Rectangle area is: ${result}`);
-    }
-calcRectangleArea (width, height);
-
-
-// ***via Try...Catch***
-
+// Not sure wich variant is more correct but both work
+// ********* Variant 1
 let width = prompt("please, enter the width:");
 let height = prompt("please, enter the height:");
 function calcRectangleArea (width, height) {
@@ -41,6 +22,24 @@ function calcRectangleArea (width, height) {
             console.log(error);
         }
  calcRectangleArea (width, height)
+
+// ******** Variant 2
+ function calcRectangleArea (width, height) {
+    if (isNaN(width) || isNaN(height) || width==="" || height==="") {
+        throw new Error ("Please, enter numeric values for width and height"); 
+    } if (width<0 || height<0){
+        throw RangeError ("The params should be > 0");
+    } 
+    return (width * height);
+}
+try {
+    let width = prompt("please, enter the width:");
+    let height = prompt("please, enter the height:");
+    let result = calcRectangleArea(width, height);
+    console.log(`The area of the rectangle is ${result}`);
+} catch (error) {
+    console.log(error.message);
+}
 
 
 // *** Task 2 . Write a checkAge() function that will prompt the user to enter their age and generate errors in the modal window if when : 
