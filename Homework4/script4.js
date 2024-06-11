@@ -82,30 +82,26 @@ function checkAge () {
 // > console . log ( showMonthName ( 5 ));// May
 // > console . log ( showMonthName ( 14 )); // MonthException Incorrect month number ***
 
-class MonthExeption extends Error{
+class MonthException extends Error{
     constructor(message){
         super(message);
-        this.name = "MonthExeption";
+        this.name = "MonthException";
     }
 }
-
 function showMonthName(month){
     const monthArray = ["January", "February", "March", "April",  "May", "June", "July", "August",  "September", "October",  "November", "December"];
-
     if(month <1 ||  month > 12|| isNaN(month) || month===""){
-        throw new MonthExeption("Incorrect month number");
+        throw new MonthException("Incorrect month number");
     }
     return monthArray[month - 1];
 }
 try{
-    month=+prompt("Please enter a number of the month:")
+    let month=+prompt("Please enter a number of the month:")
     console.log(showMonthName(month));
 }catch(error){
     console.log(error.name);
     console.log(error.message);
-
 }
-showMonthName(month);
 
 // *** Task 4. Implement the showUser ( id ) function, which takes the user id as a parameter and returns an object that contains the value of the passed id . 
 // The function also throws an error if a negative id is entered .Implement the showUsers ( ids ) function, which accepts an array of user ids ids 
