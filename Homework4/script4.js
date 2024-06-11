@@ -111,7 +111,7 @@ try{
 // Error: ID must not be negative: -12 [ {id: 7}, {id: 44}, {id: 22} ] ***
 
 function showUser(id) {
-    if (id<0 || isNaN(id) || id==="") {
+    if (id<0) {
         throw new Error (`ID must not be negative: ${id}`); 
     }
     return {id: id};
