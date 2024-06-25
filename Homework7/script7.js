@@ -88,3 +88,41 @@
 // }
 // window.addEventListener('resize', updateParams);
 
+
+const cities = {
+    'ger' : ['Munich', 'Stuttgart', 'Bremen', 'Berlin'],
+    'usa': ['Boston', 'Austin', 'Orlando', 'Chicago'],
+    'ukr' :['Lviv', 'Kyiv', 'Lutsk', 'Ternopil'],
+}
+
+let countryList = document.getElementById('country');
+let citiesList = document.getElementById('cities');
+let selectedInfo = document.getElementById('selectedInfo');
+
+function CityList() {
+    let selectedCountry = countryList.value;
+    citiesList.innerHTML = '';
+
+    if (selectedCountry in cities) {
+        cities[selectedCountry].forEach(city => {
+            let option = document.createElement('option');
+            option.textContent = city;
+            citiesList.appendChild(option);
+        });
+    }
+
+    const selectedCountryName = countryList.options[countryList.selectedIndex].text;
+    const selectedCity = citiesList.value;
+    selectedInfo.textContent = `${selectedCountryName}, ${selectedCity}`;
+}
+
+countryList.addEventListener('change', CityList);
+
+citiesList.addEventListener('change', function() {
+    const selectedCountryName = countryList.options[countryList.selectedIndex].text;
+    const selectedCity = citiesList.value;
+    selectedInfo.textContent = `${selectedCountryName}, ${selectedCity}`;
+});
+
+CityList();
+
