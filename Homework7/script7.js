@@ -88,7 +88,7 @@
 // }
 // window.addEventListener('resize', updateParams);
 
-
+// Task7
 const cities = {
     'ger' : ['Munich', 'Stuttgart', 'Bremen', 'Berlin'],
     'usa': ['Boston', 'Austin', 'Orlando', 'Chicago'],
