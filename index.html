@@ -6,8 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-     <!-- <h1 onclick="alert('Hello')">Title</h1> -->
-     <!-- <div>
+       <script src ='topic1.js'></script>
+        <!-- <h1 onclick="alert('Hello')">Title</h1>
+     <div>
         <h1></h1>
      </div> -->
      <!-- <h1 id="title" class="title">Title1</h1>
@@ -25,11 +26,22 @@
      <!-- <input id="inp" type="text" name="" id="" placeholder="Enter your name">
      <button id="btn">Sign Up</button> -->
 
-
-
-         <!-- <script>
-        alert("hello guys");
-    </script> --
-    <script scr ='topic1.js'></script>
+     <!-- <button onclick ="downloadBooks()">Download books</button>
+     <script>
+      function downloadBooks(){
+         const ajaxRequest = new XMLHttpRequest();
+         ajaxRequest.open('GET', 'books.json',true);
+         ajaxRequest.onreadystatechange = function ()
+ {
+   if (ajaxRequest.readyState!=4) return;
+   if (ajaxRequest.status!=200) {
+      alert ('Error' + ajaxRequest.status+ ':' + ajaxRequest.statusText);
+   } else (alert(ajaxRequest.responseText));
+} 
+ajaxRequest.send();
+   }
+    </script> -->
 </body>
-</html>
+</html> 
+
+    

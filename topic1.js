@@ -34,7 +34,7 @@
 // let ok=confirm('Are you ok?');
 // console.log(ok);
 
-let name=prompt('What is your name?');
+// let name=prompt('What is your name?');
 // console.log('Your name is '+ name); 
 // console.log('Ole'+'na');
 
@@ -997,4 +997,79 @@ let name=prompt('What is your name?');
 //     }).catch (err=>{
 //         console.log(err);
 //     })
+
+// NODE.JS
+// console.log("Hello from node js");
+// to import module fs for node js:
+// const fs=require("fs");
+// fs.readFile("info.txt", "utf-8", (error, data)=> {
+//     console.log(data);
+// })
+
+// const http=require("http");
+// http.createServer((request,response)=>{
+//     response.writeHead(200,"Content-Type: text/plain");
+//     response.write("Information from ");
+//     response.end();
+// }).listen(8000);
+// console.log("The server is listening on http://localhost:8000");
+
+// const http=require("http");
+// http.createServer((request,response)=>{
+//     response.writeHead(200,"Content-Type: text/html");
+//     response.write("<h1>Info from server</h1>");
+//     response.end();
+// }).listen(8000);
+// console.log("The server is listening on http://localhost:8000");
+
+// const {name, sayYes}= require ("./logic.js")
+// console.log(name);
+// console.log(sayYes());
+
+// Array loop chain
+// const number = [2,3,4,5,6,7,8,4,3,35,6,4];
+// // increase by one
+// const result=number.map(element=>element+1)
+// // filter bigger than 5
+//                    .filter(element=>element>5)
+// // adding all filtered elements and 0 is the first element
+//                 // .reduce((sum, element)=>sum+element,0)
+// // multiply all filtered values
+//                    .reduce((sum, element)=>sum*element,1);
+// console.log(result);
+
+// AJAX FETCH API
+// without params it will be GET method by default
+// we can work with fetch with Promises
+// fetch ("https://jsonplaceholder.typicode.com/users")
+// .then((result)=> console.log(result));
+
+// we can transform the get data in the array with objetcs
+// fetch ("https://jsonplaceholder.typicode.com/users")
+// .then((result)=> result.json())
+// .then((result)=> console.log(result));
+
+//  we can work with the data as with the classical array
+// fetch ("https://jsonplaceholder.typicode.com/users")
+// .then((result)=> result.json())
+// .then((result)=> console.log(result[0].name));
+
+// as we have an array we can make a loop
+// fetch ("https://jsonplaceholder.typicode.com/users")
+// .then((result)=> result.json())
+// .then((result)=> result.map(element=> {console.log(element.name)}));
+
+// we can also work with fetch with async function
+
+// async function getUsers() {
+//     let result  = await fetch ("https://jsonplaceholder.typicode.com/users");
+//     let data=await result.json();
+//     console.log(data);
+// }
+// getUsers();
+
+// STORAGE
+// localStorage.setItem("name", "Olena");
+// console.log(localStorage.getItem("name"));
+localStorage.removeItem("name");
 

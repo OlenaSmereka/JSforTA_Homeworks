@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Task1 -->
+ <button onclick ="changableTitle()" id="button">Vote!</button>
+     <script>
+      function changableTitle(){
+        button.innerHTML='...';
+         const ajaxRequest = new XMLHttpRequest();
+         ajaxRequest.open('GET', '/changableTitle',true);
+         ajaxRequest.onreadystatechange = function ()
+ {
+   if (ajaxRequest.readyState!=4) return;
+   if (ajaxRequest.status!=200) {
+      alert ('Error' + ajaxRequest.status+ ':' + ajaxRequest.statusText);
+      return;
+   } 
+   button.innerHTML=ajaxRequest.responseText;
+} 
+ajaxRequest.send();
+   }
+   </script>
+
+   <!-- Task2 -->
+   <button onclick ="downloadBooks()" id="button">Download books</button>
+   <ul id="list"></ul>
+     <script>
+      function downloadBooks(){
+         const ajaxRequest = new XMLHttpRequest();
+         ajaxRequest.open('GET', 'books.json',true);
+         ajaxRequest.onreadystatechange = function () {
+      
+   if (ajaxRequest.readyState!=4) return;
+      if (ajaxRequest.status!=200) {
+      alert ('Error' + ajaxRequest.status+ ': ' + ajaxRequest.statusText);
+   } else {
+    let books;
+    try {
+        books=JSON.parse(ajaxRequest.responseText);
+        books.forEach(book=>{
+            const li=document.createElement('li');
+            li.textContent=book.author;
+            document.getElementById('list').appendChild(li);
+        });
+        const button=document.getElementById('button');
+        button.parentNode.removeChild(button);
+    }
+        catch(error){
+        alert('An error occured:' + error.message);
+    }
+}
+         }
+
+ajaxRequest.send();
+   }
+   </script>
+</body>
+</html>
